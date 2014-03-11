@@ -57,12 +57,12 @@ module AWeber
   @api_endpoint  = "https://api.aweber.com"
   @auth_endpoint = "https://auth.aweber.com"
   
-  class OAuthError < Exception; end
-  class NotFoundError < Exception; end
-  class UnknownRequestError < Exception; end
-  class RateLimitError < Exception; end
-  class ForbiddenRequestError < Exception; end
-  class CreationError < Exception; end
+  class OAuthError < StandardError; end
+  class NotFoundError < StandardError; end
+  class UnknownRequestError < StandardError; end
+  class RateLimitError < StandardError; end
+  class ForbiddenRequestError < StandardError; end
+  class CreationError < StandardError; end
 end
 
 $LOAD_PATH << File.dirname(__FILE__) unless $LOAD_PATH.include?(File.dirname(__FILE__))
